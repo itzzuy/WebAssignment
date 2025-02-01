@@ -50,7 +50,7 @@ app.get('/api/listings', async(req, res) => {
 // Retrieve specific listing with a specific page
 app.get('/api/listings/:id', async(req, res) => {
     try {
-        const uniqueList = await db.getListingById(req.params._id)
+        const uniqueList = await db.getListingById(req.params.id)
         if (uniqueList) {
             res.json(uniqueList)
         } else {
